@@ -4,6 +4,21 @@
     
 }
 
+.sobre-mi{
+    text-align: center;
+    margin: 2rem;
+}
+
+.ul-hago{
+    list-style: none;
+    margin: 2rem;
+}
+
+.ul-hago li{
+    display: flex;
+    justify-content: space-around;
+}
+
 #contacto{
     text-align: center;
     margin:1rem
@@ -18,4 +33,41 @@
 .contacto-links a{
     text-decoration: none;
     color: #000;
+}
+
+/* Proyectos */
+
+.proyectos{
+    text-align: center;
+    margin: 2rem;
+}
+
+.proyectos a{
+    color: #000;
+    text-decoration:solid
+}
+
+.card-proyecto{
+    margin: 2rem;
+    display: inline-block;
+    background-color: #0f0f00;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.card-proyecto h2{
+    color: #fff;
+}
+.card-proyecto p{
+    color: #fff;
+}
+.card-proyecto a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.note{
+    display: inline-block;
+    color: red;
+    border-bottom: 1px solid red;
 }
