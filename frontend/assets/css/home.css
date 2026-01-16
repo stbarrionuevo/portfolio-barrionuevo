@@ -1,0 +1,67 @@
+.hero{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2{
+    font-size: 2.2rem;
+}
+
+.hero p{
+    font-size: 1.1rem;
+    margin: 16px 0; 
+}
+
+.boton-proyectos{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #000;
+    padding: 5px
+}
+
+section .stack{
+    background: #fff0;
+}
+
+.stack{
+    text-align: center;
+    
+}
+
+.stack h3{
+    font-size: 1.5rem;
+    
+}
+
+.contenedor-stack{
+    list-style: none;
+    background-color: #000;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.contenedor-stack:hover{
+    background-color: rgba(12, 1, 1, 0.26);
+    transition: all 0.5s;
+}
+
+.contenedor-stack li{
+    font-size: 1.1rem;
+    display: flexbox;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+
+.contacto{
+    text-align: end;
+    margin-right: 2rem;
+}
+
+.contacto a{
+    text-decoration: none;
+    color: #b4b4b4
+}

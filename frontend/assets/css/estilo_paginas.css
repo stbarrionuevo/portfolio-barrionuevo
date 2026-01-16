@@ -3,3 +3,19 @@
     padding: 0;
     
 }
+
+#contacto{
+    text-align: center;
+    margin:1rem
+}
+
+.contacto-links{
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contacto-links a{
+    text-decoration: none;
+    color: #000;
+}
