@@ -43,8 +43,18 @@
 }
 
 .proyectos a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border: #fff double 2px;
+
+}
+
+.proyectos a:hover{
+    transition: all 1.5s;
+    background-color: #fff;
+    border: #0f0f0f double 2px;;
     color: #000;
-    text-decoration:solid
 }
 
 .card-proyecto{
@@ -53,17 +63,24 @@
     background-color: #0f0f00;
     border-radius: 5px;
     padding: 1rem;
+    color: #fff;
 }
 
-.card-proyecto h2{
-    color: #fff;
+.card-proyecto ul{
+    list-style: none;
+    margin: 12px 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
 }
-.card-proyecto p{
-    color: #fff;
+
+.card-proyecto li{
+    margin: 0.5rem;
 }
-.card-proyecto a{
-    color: #fff;
-    text-decoration: none;
+
+.biblioteca-tech{
+    margin: 1rem;
+    opacity: 0.9;
 }
 
 .note{

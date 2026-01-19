@@ -21,9 +21,6 @@
     padding: 5px
 }
 
-section .stack{
-    background: #fff0;
-}
 
 .stack{
     text-align: center;
@@ -44,15 +41,21 @@ section .stack{
 }
 
 .contenedor-stack:hover{
-    background-color: rgba(12, 1, 1, 0.26);
-    transition: all 0.5s;
+    transition: all 1.5s;
+    background-color: #fff;
+    border: #0f0f0f double 2px;;
+    color: #000;
 }
 
 .contenedor-stack li{
-    font-size: 1.1rem;
-    display: flexbox;
-    justify-content: space-evenly;
-    color: #fff;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 6px 0;
+}
+
+.contenedor-stack:hover li{
+  color: #000;
+  transition: all 1.5s;
 }
 
 
