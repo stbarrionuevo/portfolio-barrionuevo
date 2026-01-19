@@ -42,19 +42,11 @@
     margin: 2rem;
 }
 
-.proyectos a{
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-    border: #fff double 2px;
-
-}
-
-.proyectos a:hover{
-    transition: all 1.5s;
-    background-color: #fff;
-    border: #0f0f0f double 2px;;
-    color: #000;
+.proyectos p a{
+  color: #000;
+  text-decoration: underline;
+  border: none;
+  padding: 0;
 }
 
 .card-proyecto{
@@ -78,13 +70,52 @@
     margin: 0.5rem;
 }
 
+.card-proyecto img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block
+}
+
+.project-gallery{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.project-gallery figure{
+  margin: 0;
+}
+
+.project-gallery figcaption{
+  margin-top: 6px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff2;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+
 .biblioteca-tech{
     margin: 1rem;
     opacity: 0.9;
 }
 
 .note{
-    display: inline-block;
+    
     color: red;
     border-bottom: 1px solid red;
 }
