@@ -26,38 +26,76 @@
         <p>Estoy trabajando en el desarrollo y documentación de mis proyectos para el portfolio.
       Mientras tanto, podés ver mi repositorio principal:
       <a href="https://github.com/stbarrionuevo" target="_blank" rel="noopener">GitHub</a>.</p>
-    
-      <div class="card-proyecto">
-        <h2>Biblioteca Virtual (Django)</h2>
-        <p>Sistema de gestión de biblioteca desarrollado con Django y Django Templates</p>
+ <section class="projects-featured">   
+<article class="card-proyecto featured"
+  data-title="Biblioteca Virtual (Aplicación Web)"
+  data-description="Sistema de gestión desarrollado con Django para el manejo administrativo de una institución educativa."
+  data-repo="https://github.com/stbarrionuevo/Biblioteca-Virtual-Teclab"
+  data-tech="Django, Python, HTML/CSS/JS, SQLite, Git/GitHub"
+  data-images="../assets/img/biblioteca/layout-biblioteca.png,../assets/img/biblioteca/libros.png,../assets/img/biblioteca/prestamos-form.png">
+  
+        <h2>Biblioteca Virtual (Aplicación Web)</h2>
+        <p>Sistema de gestión de biblioteca desarrollado con Django para el manejo administrativo de una institución educativa</p>
         <ul class="biblioteca-items">
-            <li>Interfaz con Django Templates</li>
+            <li>Interfaz visual con Django Templates</li>
             <li>CRUD de libros y entidades relacionadas</li>
             <li>Gestión de préstamos con estados y acciones (renovar, devolver, eliminar)</li>
             <li>Exportación del catálogo a Excel</li>
         </ul>
         <div class="project-gallery">
     <figure>
-        <img src="../assets/img/biblioteca/layout-biblioteca.png" alt="Dashboard de la Biblioteca Virtual con métricas">
+        <img loading="lazy" src="../assets/img/biblioteca/layout-biblioteca.png" alt="Dashboard de la Biblioteca Virtual con métricas">
     <figcaption>Dashboard / Inicio</figcaption>
     </figure>
 
     <figure>
-        <img src="../assets/img/biblioteca/libros.png" alt="Listado de libros con filtros, paginación y descarga de catálogo">
+        <img loading="lazy" src="../assets/img/biblioteca/libros.png" alt="Listado de libros con filtros, paginación y descarga de catálogo">
         <figcaption>Libros + filtros + export Excel</figcaption>
     </figure>
 
     <figure>
-        <img src="../assets/img/biblioteca/prestamos-form.png" alt="Formulario de carga de préstamo con validaciones">
+        <img loading="lazy" src="../assets/img/biblioteca/prestamos-form.png" alt="Formulario de carga de préstamo con validaciones">
         <figcaption>Formulario de préstamo</figcaption>
     </figure>
     </div>
         <a class="btn" href="https://github.com/stbarrionuevo/Biblioteca-Virtual-Teclab" target="_blank" rel="noopener">Ir al repo</a>
-        <p class="biblioteca-tech"><strong>Tech:</strong> Django, Python, HTML/CSS, SQLite, Git/GitHub</p>
-        <p>|| El resto del proyecto se puede visualizar completamente en el repositorio ||</p>
-      </div>
-      <p class="note">Próximamente: más proyectos y demos.</p>
+        <p class="tech"><strong>Tech:</strong> Django, Python, HTML/CSS/JS, SQLite, Git/GitHub</p>
+        <p>El resto del proyecto se puede visualizar completamente en el repositorio</p>
+</article>
+</section>
+
+<section class="project-rows">
+<article class="card-proyecto mini"
+  data-title="Mini proyecto 1"
+  data-description="Texto demo"
+  data-repo="https://github.com/stbarrionuevo"
+  data-tech="HTML, CSS, JavaScript"
+  data-images="">
+        <h2>Mini proyecto 1</h2>
+        <p>Texto demo</p>
+        <button class="btn btn-preview" type="button">Ver detalles</button>
+        <a class="btn" href="https://github.com/stbarrionuevo" target="_blank" rel="noopener">Ir al repo</a>
+        <p class="tech"><strong>Tech:</strong> </p>
+        <p>El resto del proyecto se puede visualizar completamente en el repositorio</p>
+</article>
+          
+<article class="card-proyecto mini"
+  data-title="Mini proyecto 2"
+  data-description="Texto demo"
+  data-repo="https://github.com/stbarrionuevo"
+  data-tech="HTML, CSS, JavaScript"
+  data-images="">
+        <h2>Mini proyecto 2</h2>
+        <p>Texto demo</p>
+        <button class="btn btn-preview" type="button">Ver detalles</button>
+        <a class="btn" href="https://github.com/stbarrionuevo" target="_blank" rel="noopener">Ir al repo</a>
+        <p class="tech"><strong>Tech:</strong> </p>
+        <p>El resto del proyecto se puede visualizar completamente en el repositorio</p>
+</article>
+      
     </section>
+    <p class="note">Próximamente: más proyectos y demos.</p>
+ </section>   
 </main>
 <footer>
   <ul class="footer-links">
@@ -66,5 +104,15 @@
     <li>LinkedIn: <a href="https://www.linkedin.com/in/santiago-t-barrionuevo/" target="_blank" rel="noopener">santiago-t-barrionuevo</a></li>
   </ul>
 </footer>
+<dialog id="projectModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" type="button" aria-label="Cerrar">✕</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p id="modalTech"></p>
+    <div id="modalGallery" class="modal-gallery"></div>
+    <a id="modalRepo" class="btn" target="_blank" rel="noopener">Ir al repo</a>
+  </div>
+</dialog>
 </body>
 </html>

@@ -109,9 +109,25 @@
   opacity: 0.9;
 }
 
-.biblioteca-tech{
+.tech{
     margin: 1rem;
     opacity: 0.9;
+}
+
+/* Contenedor que después puede ser carrusel */
+.projects-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 12px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.projects-row > .card-proyecto {
+  scroll-snap-align: start;
+  min-width: 280px;
+  max-width: 380px;
+  flex: 0 0 auto;
 }
 
 .note{
