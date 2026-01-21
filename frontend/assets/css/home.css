@@ -1,58 +1,192 @@
+/* ========= Hero ========= */
 .hero{
-    text-align: center;
-    padding: 60px 20px;
+  text-align:center;
+  padding: 38px 18px;
+  border-radius: var(--radius2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: var(--shadow);
 }
 
 .hero h2{
-    font-size: 2.2rem;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  margin-bottom: 10px;
 }
 
 .hero p{
-    font-size: 1.1rem;
-    margin: 16px 0; 
+  max-width: 70ch;
+  margin: 0 auto 16px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
+/* ========= Sections spacing ========= */
+.stack, .highlights, .teaser, .metodologia, .contacto{
+  margin-top: 22px;
+}
 
-
+/* ========= Stack ========= */
 .stack{
-    text-align: center;
-    
+  text-align:center;
+  padding: 22px 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .stack h3{
-    font-size: 1.5rem;
-    
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
 }
 
 .contenedor-stack{
-    list-style: none;
-    background-color: #000;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.contenedor-stack:hover{
-    transition: all 1.5s;
-    background-color: #fff;
-    border: #0f0f0f double 2px;;
-    color: #000;
+  list-style:none;
+  display: grid;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .contenedor-stack li{
-  font-size: 1.1rem;
-  color: #fff;
-  margin: 6px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--text);
+  text-align: left;
+  line-height: 1.4;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
-.contenedor-stack:hover li{
-  color: #000;
-  transition: all 1.5s;
+.contenedor-stack li:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.18);
 }
 
+/* ========= Highlights ========= */
+.highlights h3{
+  text-align:center;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
 
+.highlights-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.highlight-card{
+  padding: 18px 16px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.highlight-card:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.highlight-card h4{
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.highlight-card p{
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ========= Teaser ========= */
+.teaser{
+  border-radius: var(--radius2);
+  padding: 22px 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+  box-shadow: var(--shadow);
+}
+
+.teaser h3{
+  text-align:center;
+  margin-bottom: 8px;
+}
+
+.teaser p{
+  text-align:center;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.teaser ul{
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  max-width: 70ch;
+  margin: 0 auto 16px;
+  padding: 0;
+  color: var(--muted);
+}
+
+.img-badge{
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  margin: 12px auto 14px;
+  background:
+    radial-gradient(600px 160px at 10% 20%, rgba(96,165,250,0.25), transparent 60%),
+    radial-gradient(600px 180px at 90% 60%, rgba(167,139,250,0.25), transparent 60%),
+    rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* ========= Metodología ========= */
+.metodologia{
+  padding: 20px 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.metodologia h3{
+  text-align:center;
+  margin-bottom: 10px;
+}
+
+.metodologia p{
+  text-align:center;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto 8px;
+}
+
+/* ========= Contact ========= */
 .contacto{
-    text-align: center;
-    margin: 2rem;
+  text-align:center;
+  padding: 24px 18px;
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
+.contacto p{
+  color: var(--muted);
+  margin: 8px 0 10px;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 980px){
+  .highlights-grid{
+    grid-template-columns: 1fr;
+  }
+  .img-badge{
+    height: 140px;
+  }
+}
