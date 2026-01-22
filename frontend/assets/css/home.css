@@ -111,6 +111,10 @@
   border: 1px solid rgba(255,255,255,0.10);
   background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
   box-shadow: var(--shadow);
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .teaser h3{
@@ -134,16 +138,34 @@
   color: var(--muted);
 }
 
-.img-badge{
+
+.teaser-img{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  margin: 1.2rem auto;
+  max-width: 900px;
+}
+
+.teaser-img img{
   width: 100%;
-  height: 160px;
-  border-radius: 16px;
-  margin: 12px auto 14px;
-  background:
-    radial-gradient(600px 160px at 10% 20%, rgba(96,165,250,0.25), transparent 60%),
-    radial-gradient(600px 180px at 90% 60%, rgba(167,139,250,0.25), transparent 60%),
-    rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
+  height: auto;
+  display: block;
+  filter: blur(3px) brightness(0.72);
+  transform: scale(1.04);
+}
+
+/* overlay tipo “teaser” */
+.teaser-img::after{
+  content: "Preview del proyecto";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0,0,0,.25);
 }
 
 /* ========= Metodología ========= */
@@ -180,6 +202,12 @@
   color: var(--muted);
   margin: 8px 0 10px;
 }
+
+.teaser a{
+  margin-bottom: 10px;
+}
+
+
 
 /* ========= Responsive ========= */
 @media (max-width: 980px){

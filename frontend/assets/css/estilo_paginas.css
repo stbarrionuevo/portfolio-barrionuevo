@@ -1,86 +1,101 @@
-*{
-    margin:0;
-    padding: 0;
-    
+/* ===============================
+   PROYECTOS – estilo moderno
+   (pegar al final del archivo)
+================================ */
+
+/* Variables mínimas para que no rompa var(--text) */
+:root{
+  --text: #f5f5f5;
+  --muted: rgba(255,255,255,0.72);
+  --glass: rgba(255,255,255,0.06);
+  --glass-2: rgba(255,255,255,0.10);
+  --border: rgba(255,255,255,0.14);
 }
 
-.sobre-mi{
-    text-align: center;
-    margin: 2rem;
+/* Layout general */
+.page{
+  padding: 24px 0;
 }
-
-.ul-hago{
-    list-style: none;
-    margin: 2rem;
-}
-
-.ul-hago li{
-    display: flex;
-    justify-content: space-around;
-}
-
-#contacto{
-    text-align: center;
-    margin:1rem
-}
-
-.contacto-links{
-    list-style: none;
-    text-decoration: none;
-    text-align: center;
-}
-
-.contacto-links a{
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Proyectos */
 
 .proyectos{
-    text-align: center;
-    margin: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center
 }
 
+.proyectos > p{
+  color: var(--muted);
+  margin: 10px 0 14px;
+  line-height: 1.6;
+}
+
+/* Link GitHub dentro del texto */
 .proyectos p a{
-  color: #000;
+  color: #fff;
   text-decoration: underline;
-  border: none;
-  padding: 0;
 }
 
+/* Featured arriba */
+.projects-featured{
+  margin-top: 18px;
+}
+
+/* Card base */
 .card-proyecto{
-    margin: 2rem;
-    display: inline-block;
-    background-color: rgba(255,255,255,0.06);
-    border-radius: 5px;
-    padding: 1rem;
-    color: #fff;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  color: var(--text);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
 }
 
+/* Featured card más protagonista */
+.card-proyecto.featured{
+  padding: 22px;
+}
+
+/* Tipografías dentro de cards */
+.card-proyecto h2{
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.card-proyecto p{
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.tech{
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* Lista de features */
 .card-proyecto ul{
-    list-style: none;
-    margin: 12px 0;
-    padding: 0;
-    display: grid;
-    gap: 6px;
+  list-style: none;
+  margin: 12px 0 4px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  text-align: start;
 }
 
 .card-proyecto li{
-    margin: 0.5rem;
+  margin: 0;
+  padding-left: 12px;
+  position: relative;
+  color: #fff;
+  opacity: 0.92;
 }
 
-.card-proyecto img{
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block
-}
-
+/* Galería del proyecto principal (grid) */
 .project-gallery{
   margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 12px;
 }
 
@@ -88,35 +103,35 @@
   margin: 0;
 }
 
+.card-proyecto img{
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
 .project-gallery figcaption{
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 0.95rem;
   opacity: 0.85;
+  color: var(--muted);
 }
 
-.proyectos p{
-  margin-bottom: 1rem;
-}
-
-.project-gallery figcaption{
-  margin: 1rem;
-}
-
+/* Botón glass coherente */
 .btn{
-  display:inline-flex;
+  display:inline-block;
   align-items:center;
   justify-content:center;
   gap: 10px;
-
   padding: 12px 16px;
   border-radius: 12px;
   text-decoration:none;
-
   color: var(--text);
+  margin-top: 10px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.14);
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
@@ -126,30 +141,74 @@
   border-color: rgba(255,255,255,0.22);
 }
 
+/* ===============================
+   CARROUSEL “Netflix-like” (mini)
 
-.tech{
-    margin: 1rem;
-    opacity: 0.9;
+================================ */
+.project-rows{
+  margin-top: 18px;
 }
 
-/* Contenedor que después puede ser carrusel */
-.projects-row {
+
+.project-rows,
+.project-track{
   display: flex;
   gap: 14px;
   overflow-x: auto;
-  padding: 12px 0;
+  padding: 12px 0 8px;
   scroll-snap-type: x mandatory;
 }
 
-.projects-row > .card-proyecto {
+.project-rows::-webkit-scrollbar,
+.project-track::-webkit-scrollbar{
+  height: 10px;
+}
+.project-rows::-webkit-scrollbar-thumb,
+.project-track::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+
+/* Cards mini dentro del carrusel */
+.project-rows > .card-proyecto.mini,
+.project-track > .card-proyecto.mini{
   scroll-snap-align: start;
   min-width: 280px;
-  max-width: 380px;
+  max-width: 360px;
   flex: 0 0 auto;
 }
 
+.card-proyecto.mini h2{
+  font-size: 1.15rem;
+}
+
+.card-proyecto.mini .btn{
+  margin-top: 12px;
+}
+
+.card-proyecto.mini .btn + .btn{
+  margin-left: 8px;
+}
+
+/* Nota */
 .note{
-    
-    color: red;
-    border-bottom: 1px solid red;
+  display: inline-block;
+  margin-top: 18px;
+  color: #ff6b6b;
+  border-bottom: 1px solid rgba(255,107,107,0.65);
+}
+
+
+/* Responsive */
+@media (max-width: 900px){
+  .proyectos{
+    text-align: center;
+  }
+  .project-gallery{
+    grid-template-columns: 1fr;
+  }
+  .project-rows,
+  .project-track{
+    text-align: left;
+  }
 }
