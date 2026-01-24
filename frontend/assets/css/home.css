@@ -1,4 +1,4 @@
-/* ========= Hero ========= */
+
 .hero{
   text-align:center;
   padding: 38px 18px;
@@ -20,12 +20,11 @@
   line-height: 1.6;
 }
 
-/* ========= Sections spacing ========= */
 .stack, .highlights, .teaser, .metodologia, .contacto{
   margin-top: 22px;
 }
 
-/* ========= Stack ========= */
+
 .stack{
   text-align:center;
   padding: 22px 18px;
@@ -66,7 +65,6 @@
   border-color: rgba(255,255,255,0.18);
 }
 
-/* ========= Highlights ========= */
 .highlights h3{
   text-align:center;
   font-size: 1.25rem;
@@ -104,7 +102,6 @@
   line-height: 1.6;
 }
 
-/* ========= Teaser ========= */
 .teaser{
   border-radius: var(--radius2);
   padding: 22px 18px;
@@ -155,7 +152,7 @@
   transform: scale(1.04);
 }
 
-/* overlay tipo “teaser” */
+
 .teaser-img::after{
   content: "Preview del proyecto";
   position: absolute;
@@ -168,7 +165,7 @@
   background: rgba(0,0,0,.25);
 }
 
-/* ========= Metodología ========= */
+
 .metodologia{
   padding: 20px 18px;
   border-radius: var(--radius);
@@ -189,7 +186,6 @@
   margin: 0 auto 8px;
 }
 
-/* ========= Contact ========= */
 .contacto{
   text-align:center;
   padding: 24px 18px;
@@ -209,7 +205,7 @@
 
 
 
-/* ========= Responsive ========= */
+
 @media (max-width: 980px){
   .highlights-grid{
     grid-template-columns: 1fr;

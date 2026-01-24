@@ -1,4 +1,4 @@
-/* ========= Base / Theme ========= */
+
 :root{
   --bg: #000000;
   --bg2:#0a0f1b;
@@ -45,7 +45,7 @@ h1{
   margin: 18px 0 28px;
 }
 
-/* ========= Nav ========= */
+
 header{
   position: sticky;
   top: 0;
@@ -96,7 +96,6 @@ nav h2{
   border-color: rgba(255,255,255,0.10);
 }
 
-/* ========= Buttons ========= */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -121,7 +120,6 @@ nav h2{
   border-color: rgba(255,255,255,0.22);
 }
 
-/* ========= Footer ========= */
 footer{
   margin-top:auto;
   border-top: 1px solid rgba(255,255,255,0.08);
@@ -149,7 +147,7 @@ footer{
 }
 .footer-links a:hover{ opacity: 1; text-decoration: underline; }
 
-/* ========= Responsive ========= */
+
 @media (max-width: 768px){
   nav{
     flex-direction: column;

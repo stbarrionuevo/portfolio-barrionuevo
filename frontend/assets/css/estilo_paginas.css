@@ -1,9 +1,4 @@
-/* ===============================
-   PROYECTOS – estilo moderno
-   (pegar al final del archivo)
-================================ */
 
-/* Variables mínimas para que no rompa var(--text) */
 :root{
   --text: #f5f5f5;
   --muted: rgba(255,255,255,0.72);
@@ -12,7 +7,7 @@
   --border: rgba(255,255,255,0.14);
 }
 
-/* Layout general */
+
 .page{
   padding: 24px 0;
 }
@@ -30,18 +25,18 @@
   line-height: 1.6;
 }
 
-/* Link GitHub dentro del texto */
+
 .proyectos p a{
   color: #fff;
   text-decoration: underline;
 }
 
-/* Featured arriba */
+
 .projects-featured{
   margin-top: 18px;
 }
 
-/* Card base */
+
 .card-proyecto{
   background: var(--glass);
   border: 1px solid var(--border);
@@ -52,12 +47,11 @@
   backdrop-filter: blur(10px);
 }
 
-/* Featured card más protagonista */
+
 .card-proyecto.featured{
   padding: 22px;
 }
 
-/* Tipografías dentro de cards */
 .card-proyecto h2{
   margin-bottom: 8px;
   font-size: 1.3rem;
@@ -73,7 +67,6 @@
   color: var(--muted);
 }
 
-/* Lista de features */
 .card-proyecto ul{
   list-style: none;
   margin: 12px 0 4px;
@@ -91,7 +84,6 @@
   opacity: 0.92;
 }
 
-/* Galería del proyecto principal (grid) */
 .project-gallery{
   margin-top: 14px;
   display: grid;
@@ -118,7 +110,6 @@
   color: var(--muted);
 }
 
-/* Botón glass coherente */
 .btn{
   display:inline-block;
   align-items:center;
@@ -141,56 +132,184 @@
   border-color: rgba(255,255,255,0.22);
 }
 
-/* ===============================
-   CARROUSEL “Netflix-like” (mini)
 
-================================ */
+
 .project-rows{
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
+.carousel-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
 
-.project-rows,
+.carousel-title{
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.carousel-controls{
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.carousel-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.24);
+}
+
 .project-track{
   display: flex;
   gap: 14px;
   overflow-x: auto;
-  padding: 12px 0 8px;
+  padding: 8px 4px 14px;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-.project-rows::-webkit-scrollbar,
+
 .project-track::-webkit-scrollbar{
   height: 10px;
 }
-.project-rows::-webkit-scrollbar-thumb,
 .project-track::-webkit-scrollbar-thumb{
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.14);
   border-radius: 999px;
 }
 
-/* Cards mini dentro del carrusel */
-.project-rows > .card-proyecto.mini,
 .project-track > .card-proyecto.mini{
   scroll-snap-align: start;
+  flex: 0 0 auto;
   min-width: 280px;
   max-width: 360px;
-  flex: 0 0 auto;
 }
 
-.card-proyecto.mini h2{
-  font-size: 1.15rem;
+.card-actions{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start; 
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.card-proyecto.mini .btn{
-  margin-top: 12px;
+
+.card-actions .btn{
+  width: auto;
 }
 
-.card-proyecto.mini .btn + .btn{
-  margin-left: 8px;
+
+/*
+  SOBRE MI  
+*/
+.sobre-mi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Nota */
+.sobre-mi ul{
+  list-style: none;
+}
+
+.sobre-mi li{
+  margin: 10px;
+}
+
+
+.sobre-mi .ul-hago{
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.sobre-mi .ul-hago li{
+  margin: 0;
+  padding-left: 14px;
+  position: relative;
+  color: var(--text);
+  opacity: 0.92;
+}
+
+.sobre-mi .ul-hago li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
+}
+
+/* CONTACTO */
+#contacto{
+  max-width: 900px;
+  margin: 18px auto 0;
+  padding: 18px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
+
+#contacto p{
+  color: var(--muted);
+  margin: 10px;
+}
+
+#contacto .contacto-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+#contacto .contacto-links a{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  padding-bottom: 2px;
+}
+
+#contacto .contacto-links a:hover{
+  border-bottom-color: rgba(255,255,255,0.35);
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  .sobre-mi,
+  #contacto{
+    padding: 14px;
+    margin: 14px 12px 0;
+  }
+}
+
+@media (max-width: 520px){
+  .carousel-btn{
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
 .note{
   display: inline-block;
   margin-top: 18px;
@@ -199,7 +318,6 @@
 }
 
 
-/* Responsive */
 @media (max-width: 900px){
   .proyectos{
     text-align: center;
